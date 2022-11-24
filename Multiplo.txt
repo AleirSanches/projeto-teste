@@ -1,0 +1,49 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.math.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Multiple {
+
+	
+    
+	public static void main(String[] args) {
+		
+		Scanner input= new Scanner(System.in);
+		System.out.println("Digite o valor para X:");
+		int x=input.nextInt();
+		System.out.println();
+		System.out.println("Digite um valor para Z:");
+		int z=input.nextInt();
+		System.out.println(inMultiple(x, z) );
+		
+		
+		System.out.println();
+		
+		
+		
+	
+ 
+ }//funão criada para verificar se b e multiplo de a.
+	public static boolean  inMultiple(int a, int b) 
+	
+	{ 
+	  boolean res=true;	
+	  int um=a;
+	  int dois=b;
+	  if (b%a==0) // se divisão de B por A for igual a 0, então e multiplo
+	  {
+		 res=true;
+		 System.out.printf(" O Valor de %d é multiplo de %d%n",b,a);  
+	  }
+	  else 
+	  {
+		res=false; // não e multiplo 
+		System.out.printf(" O Valor de %d não e multiplo de %d%n",b,a);  	
+	  }
+	
+	return res; // retorna o resultado
+}
+}

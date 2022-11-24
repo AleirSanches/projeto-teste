@@ -1,0 +1,51 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.math.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Exponenciação {
+
+	
+
+	public static void main(String[] args) {
+		
+		Scanner input= new Scanner(System.in);
+		System.out.println("Digite o valor para a base:");
+		int base=input.nextInt();
+		System.out.println();
+		System.out.println("Digite um valor para expoente:");
+		int expoente=input.nextInt();
+		System.out.println();
+		
+		
+		System.out.printf(" O resultado de %d evevado a %d e igual = a %d",base,expoente,interPower(base,expoente)); 
+		
+		
+		
+	
+ 
+ }
+	public static int  interPower(int a, int b) 
+	
+	{
+		int res=a;
+		int total=0;
+		int ba=a;
+		int ex=b;
+		for (int ini=1; ini<b;ini++)
+		{
+			res*=a;
+			total=res;
+			res=total;
+			
+		}
+		
+		
+		return res;
+		
+		
+	}
+	
+}

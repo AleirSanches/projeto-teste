@@ -1,0 +1,39 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.math.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Random {
+
+	
+
+	public static void main(String[] args) {
+		
+		SecureRandom aleatorio= new SecureRandom(); 
+		
+		int seque= 2+2*aleatorio.nextInt(5);
+		int seque1= 3+2*aleatorio.nextInt(7);
+		int seque2= 6+4*aleatorio.nextInt(5);
+		int seque3= aleatorio.nextInt(9);
+		int seque4= -10+2*aleatorio.nextInt(10);
+		int seque5= -3+aleatorio.nextInt(11);
+		
+		System.out.println("Aleatorio iniciando com 2 com intervalo de 2 ,5 vezes="+seque);
+		System.out.println("Aleatorio iniciando com 3 intervalo de 2 em ,7 vezes="+seque1);
+		System.out.println("Aleatorio inicando com 6 intervalo de 4 em, 5 vezes="+seque2);
+		
+		System.out.println(" Aleatorio de 0 intervalo de 1, 9 vezes="+seque3);
+		System.out.println(" Aleatorio de -10 intervalo 2, 10 vezes="+seque4);
+		System.out.println("Aleatorio iniciando em -3  intervalor de 1 ,11 vezes="+seque5);
+		
+				
+		
+		
+	
+ 
+ }
+	
+}
+

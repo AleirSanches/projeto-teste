@@ -1,0 +1,71 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.util.Scanner;
+
+public class LeituraTeste {
+
+	
+
+	public static void main(String[] args) {
+		SecureRandom ramdomNumbers = new  SecureRandom();
+		int frequency1=0;
+		int frequency2=0;
+		int frequency3=0;
+		int frequency4=0;
+		int frequency5=0;
+		int frequency6=0;
+	
+	
+		for(int ini=1; ini <=2000; ini++ ) 
+		{
+		
+			int ramdomInt= 1+ ramdomNumbers.nextInt(6);
+			
+			System.out.printf("%d",ramdomInt);
+			if (ini % 5==0) 
+			{
+				System.out.println();
+			}
+			switch (ramdomInt) {
+			   case 1:
+			   frequency1+=1;
+			   break;
+			   
+			   case 2:
+				   frequency2+=1;
+				   break;
+				   
+			   case 3:
+				   frequency3+=1;
+				   break;
+				   
+			   case 4:
+				   frequency4+=1;
+				   break;
+				   
+			   case 5:
+				   frequency5+=1;
+				   break;
+				   
+			   case 6:
+				   frequency6+=1;
+				   break;
+				   	   
+				   	   
+				   	   
+				   	   
+				    
+			   
+			
+			
+			}
+		}
+		System.out.println();
+		System.out.printf("F1=%d%nF2=%d%nF3=%d%nF4=%d%nF5=%d%nF6=%d%n",frequency1,frequency2,frequency3,
+				frequency4,frequency5,frequency6);
+		
+	}
+	
+		
+}

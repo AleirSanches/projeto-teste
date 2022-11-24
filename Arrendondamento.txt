@@ -1,0 +1,42 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.math.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Arredondamento {
+
+	
+
+	public static void main(String[] args) {
+		
+		
+		Scanner input= new Scanner(System.in);
+		System.out.println("Digite o valor de x");
+		double x =input.nextDouble();
+
+		
+		
+	     System.out.printf("O valor de X e: %f%n",x);
+	     System.out.println();
+		 double y=Math.floor(x+0.5);
+		 double z=Math.floor(x*10+0.5)/10;
+		 double k=Math.floor(x*100+0.5)/100;
+		 double w=Math.floor(x*1000+0.5)/1000;
+		 double j=Math.floor(x*10000+0.5)/10000;
+		 
+		 System.out.printf("O valor de y e : %f%n",y);
+		 System.out.printf(" O valor de z e: %f%n",z);
+		 System.out.printf(" O valor de z e: %f%n",k);
+		 System.out.printf(" O valor de z e: %f%n",w);
+		 System.out.printf(" O valor de z e: %f%n",j);
+				 
+				
+		
+		
+	
+ 
+ }
+	
+}

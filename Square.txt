@@ -1,0 +1,38 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.util.Scanner;
+
+public class Square {
+
+	
+
+	public static void main(String[] args) {
+		System.out.print(square(7));
+		System.out.println();
+		System.out.print(square(7.5));
+		System.out.println();
+		
+		
+		
+	}	
+	
+ public static int square(int valor) 
+ {
+	 int resu=valor*valor;
+	 System.out.printf(" A multiplicação de %d * %d = %d%n",valor,valor,resu);
+	 System.out.println();
+	 return resu;
+	 
+ }
+
+ public static double square(double valor) 
+ {
+	 double resu=valor*valor;
+	 System.out.printf(" A multiplicação de %f * %f%n",valor,valor);
+	 System.out.println();
+	 return valor*valor;
+	 
+ }
+}
+

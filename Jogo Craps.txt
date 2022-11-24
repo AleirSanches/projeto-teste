@@ -1,0 +1,91 @@
+package leitura;
+
+import java.security.SecureRandom;
+import java.util.Scanner;
+
+public class Craps {
+
+	private static final SecureRandom ramdomNumbers = new  SecureRandom();
+	private enum Status {CONTINUE, WON, LOST};
+	
+	private static final int SNAKE_EYES=2;
+	private static final int  TREY=3;
+	private static final int SEVEN=7;
+	private static final int YO_LEVEN=11;
+	private static final int BOX_CARS=12;
+	
+
+	public static void main(String[] args) {
+		
+		int mypoint=0;
+		Status gameStarus; // pode conter {COTINUE, WON, LOST}
+		int sumOfDice= rollDice();
+		
+		switch (sumOfDice) 
+		{
+		   case  SEVEN:
+		   case  YO_LEVEN:
+			   gameStarus=Status.WON;
+			   break;
+			   
+		   case SNAKE_EYES:	  
+		   case TREY:	
+		   case BOX_CARS:
+			   gameStarus=Status.LOST;
+			   break;
+			   
+		   default:	
+			   gameStarus=Status.CONTINUE;
+			   mypoint=sumOfDice;
+			   System.out.printf("Point is %d%n",mypoint);
+			   System.out.println();
+			   break;
+			   
+		   }	   
+			   
+		   while (gameStarus==Status.CONTINUE)
+		   
+		   {
+			   sumOfDice= rollDice();
+			   if (sumOfDice==mypoint) 
+			   {
+				  gameStarus=Status.WON; 
+				   
+			   }
+			   else if (sumOfDice==SEVEN)
+			   
+			   {
+				   gameStarus=Status.LOST;
+			   }
+				  
+		   }
+		   
+		   if (gameStarus==Status.WON) 
+		   {
+			  System.out.println("Ganhador"); 
+			   
+		   }
+		   else 
+		   {
+			 System.out.println("Perdedor");  
+		   }
+			   
+			   
+			   
+			   
+		 
+		
+	}
+	public static int rollDice() 
+	{
+		int dado1=1 + ramdomNumbers.nextInt(6);
+		int dado2=1 + ramdomNumbers.nextInt(6);
+		int sum = dado1+dado2;
+		System.out.printf("Dado 1:%d + Dado 1 :%d = %d%n",dado1,dado2,sum);
+		System.out.println();
+		
+		return sum;
+		
+	}		
+}
+
